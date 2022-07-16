@@ -20,21 +20,28 @@ public class TestingDriver {
 		ItemDOA idoa = new MySQLItemImpl();
 		ShipmentDOA sdoa = new MySQLShipmentDOAImpl();
 		
-		// sdoa.deleteByCrate(6);
+		// sdoa.deleteByCrate(5);
 		
-		List<Shipment> shipments = sdoa.findAll();
+		// List<Shipment> shipments = sdoa.findAll();
 		// List<Shipment> shipments = sdoa.findByItems("Apple");
 		// List<Shipment> shipments = sdoa.findByWarehouse(2);
-		System.out.println(shipments);
+		// System.out.println(shipments);
 		
-		// Shipment newShipment = new Shipment("Honeydew", 750, 2);
-		// sdoa.save(newShipment);
+		Shipment newShipment = new Shipment("Banana", 50000, 2);
+		sdoa.save(newShipment);
 		// System.out.println(newShipment);
 		
 		// System.out.println(sdoa.findByCrate(2));
 		
-		// List<Warehouse> warehouses = doa.findAll();
-		// System.out.println(warehouses);
+		List<Shipment> shipments = sdoa.findAll();
+		System.out.println(shipments);
+		
+		List<Warehouse> warehouses = doa.findAll();
+		System.out.println(warehouses);
+		
+		// System.out.println(doa.getCurrentCap(2));
+		// System.out.println(doa.getMaxCap(2));
+		// System.out.println(newShipment.getPounds());
 		// System.out.println(doa.findByNum(1));
 		
 		// Warehouse newWarehouse = new Warehouse(3, 50000, 0);

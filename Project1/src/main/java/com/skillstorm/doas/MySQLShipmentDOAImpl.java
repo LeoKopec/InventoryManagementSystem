@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.skillstorm.doas.WarehouseDOA;
+import com.skillstorm.doas.MySQLWarehouseDOAImpl;
 import com.skillstorm.conf.FruitInventoryDbCreds;
 import com.skillstorm.models.Shipment;
 
@@ -95,17 +97,29 @@ public class MySQLShipmentDOAImpl implements ShipmentDOA{
 			if (rs.next()) {
 				int result = rs.getInt(1);
 				int maxId = result + 1;
-				String sql = "INSERT INTO shipment (crateID, itemName, pounds, warehouseNum) VALUES (" + maxId + ", ?, ?, ?)";
-				PreparedStatement ps = conn.prepareStatement(sql);
-				ps.setString(1, shipment.getItemName());
-				ps.setInt(2, shipment.getPounds());
-				ps.setInt(3, shipment.getWarehouseNum());
-				int rowsAffected = ps.executeUpdate();
-				if (rowsAffected != 0) {
-					conn.commit();
-				} else {
+				WarehouseDOA doa = new MySQLWarehouseDOAImpl();
+				if ((doa.getCurrentCap(shipment.getWarehouseNum()) + shipment.getPounds()) < doa.getMaxCap(shipment.getWarehouseNum())) {
+					String sql = "INSERT INTO shipment (crateID, itemName, pounds, warehouseNum) VALUES (" + maxId + ", ?, ?, ?)";
+					PreparedStatement ps = conn.prepareStatement(sql);
+					ps.setString(1, shipment.getItemName());
+					ps.setInt(2, shipment.getPounds());
+					ps.setInt(3, shipment.getWarehouseNum());
+					int rowsAffected = ps.executeUpdate();
+					int newCurrent = doa.getCurrentCap(shipment.getWarehouseNum()) + shipment.getPounds();
+					String updateCap = "UPDATE warehouses SET currentCapacity = " + newCurrent + " WHERE warehouseNum = " + shipment.getWarehouseNum();
+					PreparedStatement ps2 = conn.prepareStatement(updateCap);
+					ps2.executeUpdate();
+					if (rowsAffected != 0) {
+						conn.commit();
+					} else {
+						conn.rollback();
+					}
+				}else {
+					System.out.println("Unable to process shipment because it would take the warehouse over capacity.");
 					conn.rollback();
 				}
+			} else {
+				conn.rollback();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

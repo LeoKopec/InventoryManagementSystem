@@ -11,4 +11,6 @@ public interface WarehouseDOA {
 	public void save(Warehouse warehouse);
 	public void updateCurrentCapacity(Warehouse warehouse);
 	public void deleteByNum(int warehouseNum);
+	public int getMaxCap(int warehouseNum);
+	public int getCurrentCap(int warehouseNum);
 }

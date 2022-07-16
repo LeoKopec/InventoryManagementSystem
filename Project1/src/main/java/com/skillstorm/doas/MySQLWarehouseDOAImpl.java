@@ -94,19 +94,35 @@ public class MySQLWarehouseDOAImpl implements WarehouseDOA{
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
+	@Override
+	public int getMaxCap(int warehouseNum) {
+		String sql = "SELECT maxCapacity FROM warehouses WHERE warehouseNum = " + warehouseNum;
+		try (Connection conn = FruitInventoryDbCreds.getInstance().getConnection()) {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				return rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	@Override
+	public int getCurrentCap(int warehouseNum) {
+		String sql = "SELECT currentCapacity FROM warehouses WHERE warehouseNum = " + warehouseNum;
+		try (Connection conn = FruitInventoryDbCreds.getInstance().getConnection()) {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				return rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 }
