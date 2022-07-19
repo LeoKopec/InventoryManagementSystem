@@ -1,0 +1,14 @@
+<h2>List Shipments</h2>
+<table>
+    <thead>
+        <tr><th>Crate ID</th><th>Item Name</th><th>Pounds</th><th>Warehouse Number</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let shipment of shipments">
+            <td>{{shipment.crateID}}</td>
+            <td>{{shipment.itemName}}</td>
+            <td>{{shipment.pounds}}</td>
+            <td>{{shipment.warehouseNum}}</td>
+        </tr>
+    </tbody>
+</table>

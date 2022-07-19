@@ -1,0 +1,7 @@
+<h2>Save Shipment</h2>
+<form (submit)="submit(shipment)">
+    <input type="text" name="itemName" [(ngModel)]="shipment.itemName"/>
+    <input type="number" name="pounds" [(ngModel)]="shipment.pounds"/>
+    <input type="number" name="warehouseNum" [(ngModel)]="shipment.warehouseNum"/>
+    <input type="submit"/>
+</form>

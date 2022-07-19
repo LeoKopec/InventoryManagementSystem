@@ -12,9 +12,12 @@ import com.skillstorm.doas.WarehouseDOA;
 import com.skillstorm.doas.MySQLWarehouseDOAImpl;
 import com.skillstorm.conf.FruitInventoryDbCreds;
 import com.skillstorm.models.Shipment;
+import com.skillstorm.models.Warehouse;
 
 public class MySQLShipmentDOAImpl implements ShipmentDOA{
 
+	WarehouseDOA doa = new MySQLWarehouseDOAImpl();
+	
 	@Override
 	public List<Shipment> findAll() {
 		String sql = "SELECT * FROM shipment";
@@ -129,6 +132,13 @@ public class MySQLShipmentDOAImpl implements ShipmentDOA{
 
 	@Override
 	public void deleteByCrate(int crateId) {
+		Shipment shipment = findByCrate(crateId);
+		int pounds = shipment.getPounds();
+		int warehouseNum = shipment.getWarehouseNum();
+		Warehouse warehouse = doa.findByNum(warehouseNum);
+		int currentCapcity = warehouse.getCurrentCapacity() - pounds;
+		warehouse.setCurrentCapacity(currentCapcity);
+		doa.updateCurrentCapacity(warehouse);
 		String sql = "DELETE FROM shipment WHERE crateID = " + crateId;
 		try (Connection conn = FruitInventoryDbCreds.getInstance().getConnection()) {
 			conn.setAutoCommit(false);

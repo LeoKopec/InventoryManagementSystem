@@ -63,11 +63,7 @@ public class ShipmentServlet extends HttpServlet{
 					resp.getWriter().print(mapper.writeValueAsString(new IllegalArgumentException("Item not found")));
 				} 
 			} catch (Exception e2) {
-				// Means that there wasn't an id in the URL. Fetch all artists instead
-				List<Shipment> shipments = doa.findAll();
-				System.out.println(shipments);
-				resp.setContentType("application/json");
-				resp.getWriter().print(mapper.writeValueAsString(shipments));
+				e2.printStackTrace();
 			}
 		}
 	}

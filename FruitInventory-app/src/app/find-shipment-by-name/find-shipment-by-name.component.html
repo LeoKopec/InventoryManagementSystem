@@ -1,0 +1,16 @@
+<h2>Find Shipments by Name</h2>
+<input type="text" name="searchName" [(ngModel)]="searchName" (change)="onChange()"/>
+
+<table>
+    <thead>
+        <tr><th>Crate ID</th><th>Item Name</th><th>Pounds</th><th>Warehouse Number</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let shipment of shipments">
+            <td>{{shipment.crateID}}</td>
+            <td>{{shipment.itemName}}</td>
+            <td>{{shipment.pounds}}</td>
+            <td>{{shipment.warehouseNum}}</td>
+        </tr>
+    </tbody>
+</table>

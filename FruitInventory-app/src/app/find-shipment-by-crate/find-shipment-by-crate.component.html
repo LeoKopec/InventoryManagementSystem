@@ -1,0 +1,9 @@
+<h2>Find Shipment by Crate ID</h2>
+<input type="text" name="searchNum" [(ngModel)]="searchNum" (change)="onChange()"/>
+
+<section *ngIf="shipment">
+    <div>Name: {{shipment.crateID}}</div>
+    <div>Name: {{shipment.itemName}}</div>
+    <div>Name: {{shipment.pounds}}</div>
+    <div>Name: {{shipment.warehouseNum}}</div>
+</section>

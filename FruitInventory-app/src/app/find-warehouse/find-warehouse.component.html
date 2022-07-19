@@ -1,0 +1,8 @@
+<h2>Find Warehouse</h2>
+<input type="number" name="searchNum" [(ngModel)]="searchNum" (change)="onChange()"/>
+
+<section *ngIf="warehouse">
+    <div>Warehouse Number: {{warehouse.warehouseNum}}</div>
+    <div>Max Capacity: {{warehouse.maxCapacity}}</div>
+    <div>Current Capacity: {{warehouse.currentCapacity}}</div>
+</section>

@@ -1,0 +1,7 @@
+<h2>Find Item</h2>
+<input type="text" name="searchName" [(ngModel)]="searchName" (change)="onChange()"/>
+
+<section *ngIf="item">
+    <div>Name: {{item.itemName}}</div>
+    <div>Price per Pound: {{item.pricePerPound}}</div>
+</section>

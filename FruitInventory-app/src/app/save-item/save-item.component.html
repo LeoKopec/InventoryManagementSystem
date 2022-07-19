@@ -1,0 +1,6 @@
+<h2>Save Item</h2>
+<form (submit)="submit(item)">
+    <input type="text" name="itemName" [(ngModel)]="item.itemName"/>
+    <input type="number" name="pricePerPound" [(ngModel)]="item.pricePerPound"/>
+    <input type="submit"/>
+</form>
