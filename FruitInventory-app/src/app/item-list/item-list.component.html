@@ -1,0 +1,11 @@
+<table>
+    <thead>
+        <tr><th>Item Name</th><th>Price per Pound</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items">
+            <td>{{item.itemName}}</td>
+            <td>{{item.pricePerPound}}</td>
+        </tr>
+    </tbody>
+</table>
