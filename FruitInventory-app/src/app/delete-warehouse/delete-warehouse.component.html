@@ -1,5 +1,7 @@
 <h2>Delete Warehouse</h2>
 <form (submit)="onChange()">
-    <input type="number" name="deleteNum" [(ngModel)]="deleteNum" />
-    <input type="submit"/>
+    <p-inputNumber name="deleteNum" [(ngModel)]="deleteNum"></p-inputNumber>
+    <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>
+
+

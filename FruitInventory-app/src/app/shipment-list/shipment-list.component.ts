@@ -19,6 +19,11 @@ export class ShipmentListComponent implements OnInit {
     this.service.findAllShipments().subscribe(data => {
       this.shipments = data;
     });
+    this.service.Refreshrequired.subscribe(response => {
+      this.service.findAllShipments().subscribe(data => {
+        this.shipments = data;
+      });
+    })
   }
 
 }

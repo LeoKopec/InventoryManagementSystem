@@ -19,6 +19,11 @@ export class WarehouseListComponent implements OnInit {
     this.service.findAllWarehouses().subscribe(data => {
       this.warehouses = data;
     });
+    this.service.Refreshrequired.subscribe(response => {
+      this.service.findAllWarehouses().subscribe(data => {
+        this.warehouses = data;
+      });
+    })
   }
 
 }

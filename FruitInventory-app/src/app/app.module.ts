@@ -19,6 +19,15 @@ import { FindShipmentByCrateComponent } from './find-shipment-by-crate/find-ship
 import { SaveShipmentComponent } from './save-shipment/save-shipment.component';
 import { DeleteShipmentComponent } from './delete-shipment/delete-shipment.component';
 import { FindShipmentsByWarehouseComponent } from './find-shipments-by-warehouse/find-shipments-by-warehouse.component';
+import {TableModule} from 'primeng/table';
+import {MenubarModule} from 'primeng/menubar';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {ButtonModule} from 'primeng/button';
+import { ShipmentsComponent } from './shipments/shipments.component';
+import {InputTextModule} from 'primeng/inputtext';
+import { WarehouseComponent } from './warehouse/warehouse.component';
+
+
 
 @NgModule({
   declarations: [
@@ -36,13 +45,20 @@ import { FindShipmentsByWarehouseComponent } from './find-shipments-by-warehouse
     FindShipmentByCrateComponent,
     SaveShipmentComponent,
     DeleteShipmentComponent,
-    FindShipmentsByWarehouseComponent
+    FindShipmentsByWarehouseComponent,
+    ShipmentsComponent,
+    WarehouseComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
-    FormsModule
+    FormsModule,
+    TableModule,
+    MenubarModule,
+    InputNumberModule,
+    ButtonModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

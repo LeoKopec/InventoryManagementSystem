@@ -1,16 +1,16 @@
 <h2>Find Shipments by Warehouse</h2>
 <input type="number" name="searchNum" [(ngModel)]="searchNum" (change)="onChange()"/>
 
-<table>
-    <thead>
-        <tr><th>Crate ID</th><th>Item Name</th><th>Pounds</th><th>Warehouse Number</th></tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let shipment of shipments">
+<p-table [value]="shipments" styleClass="p-datatable-gridlines">
+    <ng-template pTemplate="header">
+        <tr><th>Crate ID</th><th>Fruit</th><th>Pounds</th><th>Warehouse Number</th></tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-shipment>
+        <tr>
             <td>{{shipment.crateID}}</td>
             <td>{{shipment.itemName}}</td>
-            <td>{{shipment.pounds}}</td>
+            <td>{{shipment.pounds | number}}</td>
             <td>{{shipment.warehouseNum}}</td>
         </tr>
-    </tbody>
-</table>
+    </ng-template>
+</p-table>

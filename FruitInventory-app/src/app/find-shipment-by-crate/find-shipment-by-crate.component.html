@@ -2,8 +2,8 @@
 <input type="text" name="searchNum" [(ngModel)]="searchNum" (change)="onChange()"/>
 
 <section *ngIf="shipment">
-    <div>Name: {{shipment.crateID}}</div>
-    <div>Name: {{shipment.itemName}}</div>
-    <div>Name: {{shipment.pounds}}</div>
-    <div>Name: {{shipment.warehouseNum}}</div>
+    <div>Crate ID: {{shipment.crateID}}</div>
+    <div>Fruit: {{shipment.itemName}}</div>
+    <div>Pounds: {{shipment.pounds | number}}</div>
+    <div>Warehouse Number: {{shipment.warehouseNum}}</div>
 </section>

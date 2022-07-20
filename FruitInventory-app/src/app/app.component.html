@@ -1,27 +1,24 @@
-<app-save-item></app-save-item>
-<hr>
-<app-item-list></app-item-list>
-<hr>
-<app-find-item></app-find-item>
-<hr>
-<app-update-item></app-update-item>
-<hr>
-<app-warehouse-list></app-warehouse-list>
-<hr>
-<app-find-warehouse></app-find-warehouse>
-<hr>
-<app-save-warehouse></app-save-warehouse>
-<hr>
-<app-delete-warehouse></app-delete-warehouse>
-<hr>
-<app-shipment-list></app-shipment-list>
-<hr>
-<app-find-shipment-by-name></app-find-shipment-by-name>
-<hr>
-<app-find-shipment-by-crate></app-find-shipment-by-crate>
-<hr>
-<app-save-shipment></app-save-shipment>
-<hr>
-<app-delete-shipment></app-delete-shipment>
-<hr>
-<app-find-shipments-by-warehouse></app-find-shipments-by-warehouse>
+<html>
+    <h1>Fruit Warehouse Manager</h1>
+<nav>
+    <!-- <a [routerLink]="['/delete-shipment']" class="link">Delete Shipment</a> | 
+    <a [routerLink]="['/delete-warehouse']">Delete Warehouse</a> | 
+    <a [routerLink]="['/find-item']">Find Item</a> | 
+    <a [routerLink]="['/find-shipment-by-crate']">Find Shipment by Crate</a> |
+    <a [routerLink]="['/find-shipment-by-name']">Find Shipment by Name</a> |
+    <a [routerLink]="['/find-shipments-by-warehouse']">Find Shipment by Warehouse</a> |
+    <a [routerLink]="['/find-warehouse']">Find Warehouse</a> |
+    <a [routerLink]="['/item-list']">Fruit List</a> |
+    <a [routerLink]="['/save-item']">Save Item</a> |
+    <a [routerLink]="['/save-shipment']">Save Shipment</a> |
+    <a [routerLink]="['/save-warehouse']">Save Warehouse</a> |
+    <a [routerLink]="['/shipment-list']">Shipment List</a> |
+    <a [routerLink]="['/update-item']">Update Fruit Price</a> |
+    <a [routerLink]="['/warehouse-list']">Warehouse List</a> | -->
+    <a [routerLink]="['/shipments']">Shipments</a> |
+    <a [routerLink]="['/warehouses']">Warehouses</a>
+</nav>
+<section>
+    <router-outlet></router-outlet>
+</section>
+</html>

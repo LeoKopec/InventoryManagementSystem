@@ -1,7 +1,10 @@
 <h2>Save Warehouse</h2>
 <form (submit)="submit(warehouse)">
-    <input type="number" name="warehouseNum" [(ngModel)]="warehouse.warehouseNum"/>
-    <input type="number" name="maxCapacity" [(ngModel)]="warehouse.maxCapacity"/>
-    <input type="number" name="currentCapacity" [(ngModel)]="warehouse.currentCapacity"/>
-    <input type="submit"/>
+    <label for="warehouseNum">Warehouse Number:</label> <br>
+    <p-inputNumber name="warehouseNum" [(ngModel)]="warehouse.warehouseNum"></p-inputNumber> <br>
+    <label for="maxCapacity">Max Capacity:</label> <br>
+    <p-inputNumber name="maxCapacity" [(ngModel)]="warehouse.maxCapacity"></p-inputNumber> <br>
+    <label for="currentCapacity">Current Capacity:</label> <br>
+    <p-inputNumber name="currentCapacity" [(ngModel)]="warehouse.currentCapacity"></p-inputNumber> <br>
+    <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>

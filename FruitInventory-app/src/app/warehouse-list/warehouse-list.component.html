@@ -1,13 +1,13 @@
 <h2>List Warehouses</h2>
-<table>
-    <thead>
-        <tr><th>Warehouse Number</th><th>Max Capacity</th><th>Current Capacity</th></tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let warehouse of warehouses">
+<p-table [value]="warehouses" styleClass="p-datatable-gridlines">
+    <ng-template pTemplate="header">
+        <tr><th>Warehouse Number</th><th>Max Capacity (lbs)</th><th>Current Capacity (lbs)</th></tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-warehouse>
+        <tr>
             <td>{{warehouse.warehouseNum}}</td>
-            <td>{{warehouse.maxCapacity}}</td>
-            <td>{{warehouse.currentCapacity}}</td>
+            <td>{{warehouse.maxCapacity | number}}</td>
+            <td>{{warehouse.currentCapacity | number}}</td>
         </tr>
-    </tbody>
-</table>
+    </ng-template>
+</p-table>
