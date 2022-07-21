@@ -16,6 +16,8 @@ import { UpdateItemComponent } from './update-item/update-item.component';
 import { WarehouseListComponent } from './warehouse-list/warehouse-list.component';
 import { ShipmentsComponent } from './shipments/shipments.component';
 import { WarehouseComponent } from './warehouse/warehouse.component';
+import { ItemsComponent } from './items/items.component';
+import { FindShipmentsByTypesComponent } from './find-shipments-by-types/find-shipments-by-types.component';
 
 const routes: Routes = [{
   path: 'item-list',
@@ -65,6 +67,12 @@ const routes: Routes = [{
 }, {
   path: 'warehouses',
   component: WarehouseComponent
+}, {
+  path: 'items',
+  component: ItemsComponent
+}, {
+  path: 'find-shipments-by-types',
+  component: FindShipmentsByTypesComponent
 }];
 
 @NgModule({

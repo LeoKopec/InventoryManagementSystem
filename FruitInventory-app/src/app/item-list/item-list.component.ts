@@ -19,6 +19,10 @@ export class ItemListComponent implements OnInit {
     this.service.findAll().subscribe(data => {
       this.items = data;
     });
+    this.service.Refreshrequired.subscribe(response => {
+      this.service.findAll().subscribe(data => {
+        this.items = data;
+      })
+    });
   }
-
 }

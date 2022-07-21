@@ -1,6 +1,8 @@
-<h2>List Shipments</h2>
 <p-table [value]="shipments" styleClass="p-datatable-gridlines">
     <ng-template pTemplate="header">
+        <div class="flex align-items-center justify-content-between">
+            <h2>Current Shipments in Warehouses</h2>
+        </div>
         <tr><th>Crate ID</th><th>Fruit</th><th>Pounds</th><th>Warehouse Number</th></tr>
     </ng-template>
     <ng-template pTemplate="body" let-shipment>

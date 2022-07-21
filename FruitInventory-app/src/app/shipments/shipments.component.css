@@ -1,0 +1,14 @@
+div {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+app-save-shipment {
+    float: left;
+}
+app-delete-shipment {
+    float: right;
+    margin-top: 10%;
+}
+app-shipment-list {
+    clear: both;
+}

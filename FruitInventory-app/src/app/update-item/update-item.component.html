@@ -1,6 +1,8 @@
 <h2>Update Item</h2>
 <form (submit)="submit(item)">
-    <input type="text" name="itemName" [(ngModel)]="item.itemName"/>
-    <input type="number" name="pricePerPound" [(ngModel)]="item.pricePerPound"/>
-    <input type="submit"/>
+    <label for="itemName">Fruit:</label> <br>
+    <input type="text" pInputText name="itemName" [(ngModel)]="item.itemName"/> <br>
+    <label for="pricePerPound">Price per Pound:</label> <br>
+    <p-inputNumber name="pricePerPound" [(ngModel)]="item.pricePerPound"></p-inputNumber> <br>
+    <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>

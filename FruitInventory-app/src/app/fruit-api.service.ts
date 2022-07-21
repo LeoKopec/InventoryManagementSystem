@@ -25,7 +25,11 @@ get Refreshrequired() {
   }
 
   updateItem(item :any) :Observable<any> {
-    return this.http.put(environment.apiUrl + this.itemSubUrl, item);
+    return this.http.put(environment.apiUrl + this.itemSubUrl, item).pipe(
+      tap(()=>{
+        this.Refreshrequired.next();
+      })
+    );
   }
 
   save(item :any) :Observable<any> {

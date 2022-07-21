@@ -26,6 +26,9 @@ import {ButtonModule} from 'primeng/button';
 import { ShipmentsComponent } from './shipments/shipments.component';
 import {InputTextModule} from 'primeng/inputtext';
 import { WarehouseComponent } from './warehouse/warehouse.component';
+import { ItemsComponent } from './items/items.component';
+import {CardModule} from 'primeng/card';
+import { FindShipmentsByTypesComponent } from './find-shipments-by-types/find-shipments-by-types.component';
 
 
 
@@ -48,6 +51,8 @@ import { WarehouseComponent } from './warehouse/warehouse.component';
     FindShipmentsByWarehouseComponent,
     ShipmentsComponent,
     WarehouseComponent,
+    ItemsComponent,
+    FindShipmentsByTypesComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,9 @@ import { WarehouseComponent } from './warehouse/warehouse.component';
     MenubarModule,
     InputNumberModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    CardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

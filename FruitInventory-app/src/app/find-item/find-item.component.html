@@ -1,7 +1,17 @@
 <h2>Find Item</h2>
-<input type="text" name="searchName" [(ngModel)]="searchName" (change)="onChange()"/>
+<!-- <input type="text" name="searchName" [(ngModel)]="searchName" (change)="onChange()"/> -->
 
-<section *ngIf="item">
-    <div>Name: {{item.itemName}}</div>
+<form (submit)="onChange()">
+    <label for="searchName">Enter Fruit:</label> <br>
+    <input type="text" pInputText name="searchName" [(ngModel)]="searchName"/> <br>
+    <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
+</form>
+
+
+
+<p-card *ngIf="item">
+    <ng-template pTemplate="header">
+        <div>Name: {{item.itemName}}</div>
+    </ng-template>
     <div>Price per Pound: {{item.pricePerPound}}</div>
-</section>
+</p-card>

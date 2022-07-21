@@ -1,6 +1,8 @@
-<h2>Save Shipment</h2>
+<p-card>
+    <ng-template pTemplate="header">
+        <h2>Log New Shipment</h2>
+    </ng-template>
 <form (submit)="submit(shipment)">
-    <!-- <input type="text" pInputText name="itemName" [(ngModel)]="shipment.itemName"/> -->
     <label for="itemName">Fruit:</label> <br>
     <input type="text" pInputText name="itemName" [(ngModel)]="shipment.itemName"/> <br>
     <label for="pounds">Pounds:</label> <br>
@@ -9,5 +11,6 @@
     <p-inputNumber name="warehouseNum" [(ngModel)]="shipment.warehouseNum"></p-inputNumber> <br>
     <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>
+</p-card>
 
 

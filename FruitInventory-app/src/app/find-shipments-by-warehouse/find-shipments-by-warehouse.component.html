@@ -1,5 +1,9 @@
 <h2>Find Shipments by Warehouse</h2>
-<input type="number" name="searchNum" [(ngModel)]="searchNum" (change)="onChange()"/>
+<form (submit)="onChange()">
+    <label for="searchNum">Warehouse Number:</label> <br>
+    <p-inputNumber name="searchNum" [(ngModel)]="searchNum"></p-inputNumber> <br>
+    <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
+</form>
 
 <p-table [value]="shipments" styleClass="p-datatable-gridlines">
     <ng-template pTemplate="header">

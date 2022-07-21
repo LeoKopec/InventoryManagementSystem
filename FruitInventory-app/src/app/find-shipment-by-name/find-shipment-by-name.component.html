@@ -1,5 +1,9 @@
 <h2>Find Shipments by Name</h2>
-<input type="text" name="searchName" [(ngModel)]="searchName" (change)="onChange()"/>
+<form (submit)="onChange()">
+    <label for="searchName">Enter Fruit:</label> <br>
+    <input type="text" pInputText name="searchName" [(ngModel)]="searchName"/> <br>
+    <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
+</form>
 
 <p-table [value]="shipments" styleClass="p-datatable-gridlines">
     <ng-template pTemplate="header">
