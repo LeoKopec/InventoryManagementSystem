@@ -3,6 +3,7 @@
         <h2>Remove Outbound Shipment</h2>
     </ng-template>
 <form (submit)="onChange()">
+    <label for="deleteNum">Crate ID:</label> <br>
     <p-inputNumber name="deleteNum" [(ngModel)]="deleteNum"></p-inputNumber><br>
     <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>
