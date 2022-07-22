@@ -1,6 +1,13 @@
+body {
+    margin-top: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+    box-shadow: 5px 5px 8px #777;
+}
 div {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
 }
 app-save-shipment {
     float: left;
@@ -11,4 +18,11 @@ app-delete-shipment {
 }
 app-shipment-list {
     clear: both;
+}
+section {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+hr {
+    background-color: black;
 }

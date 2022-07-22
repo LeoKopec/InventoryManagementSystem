@@ -1,0 +1,33 @@
+body {
+    margin-top: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+    box-shadow: 5px 5px 8px #777;
+}
+div {
+    margin-left: 14%;
+    margin-right: 16%;
+}
+app-save-item {
+    float: left;
+    margin-right: 1.5%;
+}
+app-update-item {
+    float: left; 
+    margin-right: 1%;
+    margin-left: 1.5%;
+}
+app-find-item {
+    float: right;
+    margin-left: 1.5;
+}
+app-item-list {
+    clear: both;
+}
+section {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+hr {
+    background-color: black;
+}

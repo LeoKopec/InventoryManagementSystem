@@ -1,17 +1,17 @@
-/* html {
-
-} */
-h1 {
-    background-color: plum;
-    padding: 1%;
-    margin: 0% 0% 0% 0%;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    background-color: lightgrey;
 }
-nav {
-    margin-top: 0%;
-    background-color: lightgray;
+.navbar-light {
+    background-color: rgb(121, 56, 167);
+    margin-bottom: 2.5%;
+    box-shadow: 0px 2px 5px #777;
 }
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
+.nav-item {
+    font-size: x-large !important;
+}
+.navbar-brand {
+    color: black;
+}
+.image {
+    float: right;
 }

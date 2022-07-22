@@ -1,4 +1,7 @@
-<h2>Save Item</h2>
+<p-card>
+    <ng-template pTemplate="header">
+        <h2>Store New Fruit</h2>
+    </ng-template>
 <form (submit)="submit(item)">
     <label for="itemName">Fruit:</label> <br>
     <input type="text" pInputText name="itemName" [(ngModel)]="item.itemName"/> <br>
@@ -6,4 +9,5 @@
     <p-inputNumber name="pricePerPound" [(ngModel)]="item.pricePerPound"></p-inputNumber> <br>
     <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>
+</p-card>
 

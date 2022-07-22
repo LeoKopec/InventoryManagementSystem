@@ -1,7 +1,12 @@
-<h2>Delete Warehouse</h2>
+<p-card>
+<ng-template pTemplate="header">
+    <h2>Delete Warehouse</h2>
+</ng-template>
 <form (submit)="onChange()">
+    <label for="deleteNum">Warehouse Number:</label> <br>
     <p-inputNumber name="deleteNum" [(ngModel)]="deleteNum"></p-inputNumber>
     <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>
+</p-card>
 
 

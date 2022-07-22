@@ -1,0 +1,17 @@
+body {
+    margin-top: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+    box-shadow: 5px 5px 8px #777;
+}
+div {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+/* section {
+    margin-left: 10%;
+    margin-right: 10%;
+} */
+hr {
+    background-color: black;
+}

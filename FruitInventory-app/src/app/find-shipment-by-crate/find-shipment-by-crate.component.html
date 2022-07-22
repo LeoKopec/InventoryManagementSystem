@@ -1,15 +1,23 @@
-<h2>Find Shipment by Crate ID</h2>
+<div>
+<p-card>
+    <ng-template pTemplate="header">
+        <h2>Crate ID Quick Search</h2>
+    </ng-template>
 <form (submit)="onChange()">
     <label for="searchName">Enter Crate ID:</label> <br>
     <p-inputNumber name="searchNum" [(ngModel)]="searchNum"></p-inputNumber> <br>
     <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>
+</p-card>
+</div>
 
+<section>
 <p-card *ngIf="shipment">
     <ng-template pTemplate="header">
-        <div>Crate ID: {{shipment.crateID}}</div>
+        <h2>Crate ID: {{shipment.crateID}}</h2>
     </ng-template>
-    <div>Fruit: {{shipment.itemName}}</div>
-    <div>Pounds: {{shipment.pounds | number}}</div>
-    <div>Warehouse Number: {{shipment.warehouseNum}}</div>
+    <h6><b>Fruit:</b> {{shipment.itemName}}</h6><br>
+    <h6><b>Pounds:</b> {{shipment.pounds | number}}</h6><br>
+    <h6><b>Warehouse:</b> Number: {{shipment.warehouseNum}}</h6><br>
 </p-card>
+</section>

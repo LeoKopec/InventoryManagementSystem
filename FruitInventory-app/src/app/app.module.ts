@@ -29,6 +29,7 @@ import { WarehouseComponent } from './warehouse/warehouse.component';
 import { ItemsComponent } from './items/items.component';
 import {CardModule} from 'primeng/card';
 import { FindShipmentsByTypesComponent } from './find-shipments-by-types/find-shipments-by-types.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -53,6 +54,7 @@ import { FindShipmentsByTypesComponent } from './find-shipments-by-types/find-sh
     WarehouseComponent,
     ItemsComponent,
     FindShipmentsByTypesComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

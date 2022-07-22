@@ -7,4 +7,14 @@ label {
 }
 button {
     margin-bottom: 0.3%;
+    margin-top: 0.7%;
+}
+div {
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-bottom: 1%;
+}
+section {
+    margin-left: 10%;
+    margin-right: 10%;
 }

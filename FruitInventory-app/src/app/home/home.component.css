@@ -1,0 +1,43 @@
+.button {
+    display: grid;
+    height: 35px;
+    width: 200px;
+    background: rgb(121, 56, 167);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  body {
+    margin-top: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+    box-shadow: 5px 5px 8px #777;
+}
+div {
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-bottom: 2.5%;
+}
+.one {
+    float: left;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+}
+.two {
+    float: right;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+}
+.three {
+    float: left;
+    margin-right: 2.5%;
+}
+.four {
+    float: right;
+    margin-left: 2.5%;
+}

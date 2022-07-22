@@ -1,0 +1,29 @@
+body {
+    margin-top: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+    box-shadow: 5px 5px 8px #777;
+}
+div {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+app-save-warehouse {
+    float: left;
+    margin-right: 0.5%;
+}
+app-delete-warehouse {
+    float:right;
+    margin-top: 5%;
+    margin-left: 0.5%;
+}
+app-warehouse-list {
+    clear: both;
+}
+section {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+hr {
+    background-color: black;
+}

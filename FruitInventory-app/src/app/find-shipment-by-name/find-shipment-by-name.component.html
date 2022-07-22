@@ -1,10 +1,17 @@
-<h2>Find Shipments by Name</h2>
+<div>
+<p-card>
+    <ng-template pTemplate="header">
+        <h2>Search by Fruit</h2>
+    </ng-template>
 <form (submit)="onChange()">
     <label for="searchName">Enter Fruit:</label> <br>
     <input type="text" pInputText name="searchName" [(ngModel)]="searchName"/> <br>
     <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>
+</p-card>
+</div>
 
+<section>
 <p-table [value]="shipments" styleClass="p-datatable-gridlines">
     <ng-template pTemplate="header">
         <tr><th>Crate ID</th><th>Fruit</th><th>Pounds</th><th>Warehouse Number</th></tr>
@@ -18,3 +25,4 @@
         </tr>
     </ng-template>
 </p-table>
+</section>

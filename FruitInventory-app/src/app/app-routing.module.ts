@@ -18,6 +18,7 @@ import { ShipmentsComponent } from './shipments/shipments.component';
 import { WarehouseComponent } from './warehouse/warehouse.component';
 import { ItemsComponent } from './items/items.component';
 import { FindShipmentsByTypesComponent } from './find-shipments-by-types/find-shipments-by-types.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [{
   path: 'item-list',
@@ -73,6 +74,9 @@ const routes: Routes = [{
 }, {
   path: 'find-shipments-by-types',
   component: FindShipmentsByTypesComponent
+}, {
+  path: 'home',
+  component: HomeComponent
 }];
 
 @NgModule({

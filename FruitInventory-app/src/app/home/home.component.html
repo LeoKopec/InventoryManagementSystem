@@ -1,0 +1,35 @@
+<body>
+    <div class="one">
+    <p-card header="Manage Shipments" subheader="Log, Delete, View Shipments" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <p>This resource allows you to manage all aspects of your shipments. View current shipments stored all across your 
+            warehouses, log new shipments into the system as they arrive, and remove shipments as they leave warehouses for delivery.
+        </p>
+        <a [routerLink]="['/shipments']" class="button">Take Me There</a>
+    </p-card>
+    </div>
+    <div class="two">
+    <p-card header="Search Shipments" subheader="Search Shipments by Crate, Fruits, Warehouses" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <p>This resource allows you to search through your shipments. Find a single shipment by searching the crate's ID, get a list of all 
+            shipments containing a certain type of fruit, or get a list of all shipments stored in a certain warehouse.
+        </p>
+        <a [routerLink]="['/find-shipments-by-types']" class="button">Take Me There</a>
+    </p-card>
+    </div>
+    <div class="three">
+    <p-card header="Manage Warehouses" subheader="Add, Remove, View Warehouses" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <p>This resource allows you to manage all your warehouse storage facilities. When you purchase a new warehouse, add all of its 
+            specifications. View all your current warehouse specifications as well as remove warehouses when you sell or get rid of facilities.
+        </p>
+        <a [routerLink]="['/warehouses']" class="button">Take Me There</a>
+    </p-card>
+    </div>
+    <div class="four">
+        <p-card header="Stored Fruit" subheader="Add, View, Update, Search Fruit" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <p>This resource allows you to track all of the different types of fruit that your company is managing. Add new products when you
+                begin managing new fruit types. Update prices of your products when they change as well as quick search prices.
+            </p>
+            <a [routerLink]="['/items']" class="button">Take Me There</a>
+        </p-card>
+    </div>
+</body>
+
