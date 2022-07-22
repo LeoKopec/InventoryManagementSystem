@@ -1,9 +1,9 @@
 <p-card>
     <ng-template pTemplate="header">
-        <h2>Delete Shipment</h2>
+        <h2>Remove Outbound Shipment</h2>
     </ng-template>
 <form (submit)="onChange()">
-    <p-inputNumber name="deleteNum" [(ngModel)]="deleteNum"></p-inputNumber>
+    <p-inputNumber name="deleteNum" [(ngModel)]="deleteNum"></p-inputNumber><br>
     <button pButton type="submit" class="p-button-raised p-button-rounded">Submit</button>
 </form>
 </p-card>
